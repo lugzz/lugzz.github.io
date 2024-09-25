@@ -1,0 +1,48 @@
+body {
+    background-color: #c23b2680; /* Couleur de fond corrigée */
+    margin: 0;
+    height: 100vh;
+    display: flex; /* Utilisation de flexbox pour centrer le contenu */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Remplit la hauteur du conteneur */
+}
+
+.rectangle {
+    width: 1200px; /* Largeur du rectangle */
+    height: 400px; /* Hauteur du rectangle */
+    background-color: #be292980; /* Couleur de fond du rectangle */
+    padding: 20px; /* Espacement intérieur */
+    box-shadow: 50px 50px 60px rgba(232, 0, 0, 0.5); /* Ombre pour un effet de carte */
+    color: white; /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+}
+
+.container .rectangle img {
+    max-width: 100%; /* L'image ne dépassera jamais la largeur de son conteneur */
+    height: auto;    /* Hauteur automatique pour conserver les proportions */
+
+}
+.rectangle h1 {
+    font-size: 28px; /* Taille de police pour le titre principal */
+    margin: 5px 0; /* Réduire l'espacement vertical */
+    text-align: left
+}
+
+.rectangle h2 {
+    font-size: 24px; /* Taille de police pour les sous-titres */
+    margin: 5px 0; /* Réduire l'espacement vertical */
+}
+
+.rectangle p {
+    font-size: 14px; /* Taille de police pour le texte et les listes */
+    margin: 5px 0; /* Réduire l'espacement vertical */
+}
+
+

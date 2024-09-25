@@ -1,0 +1,93 @@
+/* Styles de base de la navbar */
+.navbar {
+    background-color: #be2929;
+    text-align: center;
+    padding: 15px;
+    position: sticky; /* Rendre la navbar fixe au défilement */
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+/* Lien de navigation */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Effet au survol */
+.navbar a:hover {
+    background-color: #fff;
+    color: #be2929;
+    border-radius: 30px;
+}
+
+/* Pour petits écrans (mobile) */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+}
+body {
+    background-color: #c23b2680; /* Couleur de fond corrigée */
+    margin: 0;
+    height: 100vh;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.rectangle {
+    width: 1200px; /* Largeur du rectangle */
+    height: 400px; /* Hauteur du rectangle */
+    background-color: #be292980; /* Couleur de fond du rectangle */
+    padding: 20px; /* Espacement intérieur */
+    box-shadow: 50px 50px 60px rgba(232, 0, 0, 0.5); /* Ombre pour un effet de carte */
+    color: white; /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+}
+.rectangle h1 {
+    font-size: 28px; /* Taille de police pour le titre principal */
+    margin: 5px 0; /* Réduire l'espacement vertical */
+}
+
+.rectangle h2 {
+    font-size: 24px; /* Taille de police pour les sous-titres */
+    margin: 5px 0; /* Réduire l'espacement vertical */
+    color : pink;
+}
+
+.rectangle p {
+    font-size: 14px; /* Taille de police pour le texte et les listes */
+    margin: 5px 0; /* Réduire l'espacement vertical */
+}
+
+.taille_image{
+    width: 100px;
+}
