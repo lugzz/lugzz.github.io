@@ -1,8 +1,7 @@
 body {
-    background-color: #7368ba; /* Couleur de fond corrigée */
+    background-color: #c23b2680; /* Couleur de fond corrigée */
     margin: 0;
     height: 100vh;
-    display: flex;
     justify-content: center; /* Centrer horizontalement */
     align-items: center; /* Centrer verticalement */
 }
@@ -17,27 +16,23 @@ body {
 .rectangle {
     width: 1200px; /* Largeur du rectangle */
     height: 400px; /* Hauteur du rectangle */
-    background-color: #4CAF50; /* Couleur de fond du rectangle */
+    background-color: #be292980; /* Couleur de fond du rectangle */
     padding: 20px; /* Espacement intérieur */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre pour un effet de carte */
+    box-shadow: 50px 50px 60px rgba(232, 0, 0, 0.5); /* Ombre pour un effet de carte */
     color: white; /* Couleur du texte */
     text-align: center; /* Centrer le texte */
 }
 .rectangle h1 {
-    font-size: 24px; /* Taille de police pour le titre principal */
-    margin: 10px 0; /* Réduire l'espacement vertical */
-}
-
-.rectangle h2 {
-    font-size: 20px; /* Taille de police pour les sous-titres */
-    margin: 40px 0; /* Réduire l'espacement vertical */
-}
-
-.rectangle p, .rectangle ul {
-    font-size: 16px; /* Taille de police pour le texte et les listes */
+    font-size: 28px; /* Taille de police pour le titre principal */
     margin: 5px 0; /* Réduire l'espacement vertical */
 }
 
-.rectangle ul {
-    padding-left: 20px; /* Espacement à gauche pour les listes */
+.rectangle h2 {
+    font-size: 24px; /* Taille de police pour les sous-titres */
+    margin: 5px 0; /* Réduire l'espacement vertical */
+}
+
+.rectangle p {
+    font-size: 14px; /* Taille de police pour le texte et les listes */
+    margin: 5px 0; /* Réduire l'espacement vertical */
 }
