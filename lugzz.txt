@@ -1,0 +1,138 @@
+from tkinter import *
+import webbrowser
+import keyboard
+import time
+
+def site_web():
+    webbrowser.open_new("https://twitter.com/LugZzzz")
+
+
+
+
+
+def open_lugzz_channel():
+    def copier():
+        keyboard.press('ctrl')
+        keyboard.press('z')
+        keyboard.release('ctrl')
+        keyboard.release('z')
+        keyboard.press('ctrl')
+        keyboard.press('c')
+        keyboard.release('ctrl')
+        keyboard.release('c')
+    
+    def coller():
+        keyboard.press_and_release('backspace')
+        keyboard.press('ctrl')
+        keyboard.press('v')
+        keyboard.release('ctrl')
+        keyboard.release('v')
+
+
+    def retour():
+        keyboard.press('ctrl')
+        keyboard.press('z')
+        keyboard.release('ctrl')
+        keyboard.release('z')
+
+
+    def capture():
+        keyboard.press('windows')
+        keyboard.press('shift')
+        keyboard.press('s')
+        keyboard.release('windows')
+        keyboard.release('shift')
+        keyboard.release('s')
+
+    def imprimer():
+        keyboard.press('ctrl')
+        keyboard.press('p')
+        keyboard.release('ctrl')
+        keyboard.release('p')
+
+
+    def new_bureau():
+        keyboard.press('windows')
+        keyboard.press('ctrl')
+        keyboard.press('d')
+        keyboard.release('windows')
+        keyboard.release('ctrl')
+        keyboard.release('d')
+
+    def parametre():
+        keyboard.press('windows')
+        keyboard.press('i')
+        keyboard.release('windows')
+        keyboard.release('i')
+
+
+    def fichier():
+        keyboard.press('windows')
+        keyboard.press('e')
+        keyboard.release('windows')
+        keyboard.release('e')
+
+
+
+    def retour_bureau():
+        keyboard.press('windows')
+        keyboard.press('m')
+        keyboard.release('windows')
+        keyboard.release('m')
+
+
+
+    dictionnaire_macro = {"&":copier , "é":coller , "\"":retour , "\'":capture , "(":imprimer , "-":new_bureau , "è":parametre , "_":fichier , "ç":retour_bureau }
+
+
+    def quand_clavier_appuye(evenement):
+        #vérifier si la touche correspond à un raccourci clavier
+        if evenement.name in dictionnaire_macro.keys():
+            dictionnaire_macro[evenement.name]()
+
+        #si l'événement fait parti des clés du dictionnaire alors on appelle la valeur qui est la fonction de la macro
+
+
+    keyboard.on_press(quand_clavier_appuye)
+
+
+
+
+
+
+window = Tk()
+
+window.title("Logiciel macro")
+window.geometry("1150x409")
+window.iconbitmap("favico.ico")
+window.config(background='#353131')
+frame = Frame(window, bg='#353131')
+
+
+
+label_title = Label(frame, text="Bienvenue sur le logiciel macro", font=("Helvetica", 40), bg='#353131', fg='#FFFFFF')
+label_title.pack()
+
+label_subtitle = Label(window, text="Voici les macros disponibles", font=("Helvetica", 15), bg='#353131', fg='#FFFFFF')
+label_subtitle.place(x='28' , y='30')
+
+
+
+programme_button= Button(frame, text="Lancer le programme macro", font=("Helvetica", 25), bg='#FFFFFF', fg='#353131', command=open_lugzz_channel)
+programme_button.pack(pady=25 , fill=X)
+
+site_button= Button(frame, text="Nous contacter", font=("Helvetica", 25), bg='#FFFFFF', fg='#353131', command=site_web )
+site_button.pack()
+
+photo = PhotoImage(file='presentation_macro.png')
+label= Label(window, image=photo)
+label.place(x='30' , y='70')
+
+
+frame.place(x='350' , y='55')
+
+
+
+
+
+window.mainloop()
