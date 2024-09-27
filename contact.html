@@ -15,11 +15,21 @@
     </div>
     <div class ="container">
         <div class="rectangle">
-            <h2>Contact</h2>
-            <p>Pour plus d'informations, veuillez me contacter aux adresses suivantes :</p>
-            <a href="mailto:axdesf@gmail.com">Envoyer un email</a><br>
-        <a href="tel:0665555478">Appeler</a>
-
+            <h2>Contact</h2><br>
+            <form action="mailto:alexdesforges05@gmail.com" method="post">
+                <label for="nom">Nom et prénom : </label><input type="text" name="nom" placeholder="Ecrire ici" autofocus id="nom" required>
+                <label for="mdp">Mot de passe : </label><input type="password" name="password" placeholder="Ecrire ici" id="mdp" required><br><br>
+                <label for="age">Date d'anniversaire : </label><input type="date" name="age" id="age" required><br><br>
+                <label for="mail">Votre mail : </label><input type="email" name="mail" placeholder="Ecrire ici" id="mail" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"  required><br><br>
+                <label for="genre">Genre : </label><br>
+                <label for="monsieur">Mr </label> :&nbsp<input type="radio" name="civilite" value="Mr" id="monsieur"> 
+                <label for="madame">Mme</label>   :&nbsp<input type="radio" name="civilite" value="Mme" id="madame">
+                <label for="pas_precise">Ne pas préciser</label>  :&nbsp<input type="radio" name="civilite" value="non_precise" id="pas_precise"><br><br>
+                <label for="ville">Ville : </label>  </label><input type="text" name="ville" placeholder="Ecrire ici" id="ville"><br><br>
+                <label for="message">Votre message : </label><textarea name="message " placeholder="Ecrire ici" id="message" required></textarea><br><br>
+                <label>Conserver les données : </label><input type="checkbox" name="autorisation"><br><br>
+                <label>Soumettre: </label><input type="submit" value="J'envoie mon message"><br>
+            </form>
         </div>
     </div>
 
